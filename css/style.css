@@ -162,8 +162,25 @@ img {
     grid-template-rows: 1fr;
   }
 
+  .showcase .grid,
+  .footer .grid-3 {
+    gap: 25px;
+  }
+
   .showcase {
     height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+  }
+
+  .showcase .video {
+    height: auto;
+  }
+
+  .footer {
+    text-align: center;
   }
 }
 
