@@ -16,6 +16,14 @@ body {
   line-height: 1.6;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 h1,
 h2 {
   font-weight: 300;
@@ -85,7 +93,7 @@ img {
 /* Categories */
 
 .categories {
-  padding-top: 70px;
+  padding: 70px 0;
 }
 
 .categories h1 {
@@ -96,6 +104,38 @@ img {
   padding: 75px 0;
   justify-content: center;
   align-items: unset;
+}
+
+.categories .questions {
+  font-size: 45px;
+  margin: 0;
+  position: relative;
+  height: 75px;
+  width: auto;
+  overflow: hidden;
+}
+
+.categories ul {
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-65px);
+  }
+  60% {
+    transform: translateY(-65px);
+  }
+  70%,
+  100% {
+    transform: translateY(-142px);
+  }
 }
 
 /* Initial Users */
@@ -135,7 +175,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
 }
 
 /* Footer */
