@@ -346,10 +346,15 @@ img {
 
   .categories .container {
     display: flex;
+    flex-direction: column;
+  }
+
+  .categories .questions {
+    display: none;
   }
 
   section.users {
-    display: none;
+    /* display: none; */
   }
 
   .footer {
