@@ -90,84 +90,84 @@ dotsNav.addEventListener("click", (e) => {
 });
 
 // Mobile Slider JS
-const slider = document.querySelector(".slider-container"),
-  mobileSlides = Array.from(document.querySelectorAll("section"));
-let isDragging = false,
-  startPosition = 0,
-  currentTranslate = 0,
-  prevTranslate = 0,
-  animationID = 0,
-  currentIndex = 0;
+// const slider = document.querySelector(".slider-container"),
+//   mobileSlides = Array.from(document.querySelectorAll("section"));
+// let isDragging = false,
+//   startPosition = 0,
+//   currentTranslate = 0,
+//   prevTranslate = 0,
+//   animationID = 0,
+//   currentIndex = 0;
 
-mobileSlides.forEach((slide, index) => {
-  // Touch Events
-  slide.addEventListener("touchstart", touchStart(index));
-  slide.addEventListener("touchend", touchEnd);
-  slide.addEventListener("touchmove", touchMove);
+// mobileSlides.forEach((slide, index) => {
+//   // Touch Events
+//   slide.addEventListener("touchstart", touchStart(index));
+//   slide.addEventListener("touchend", touchEnd);
+//   slide.addEventListener("touchmove", touchMove);
 
-  // Mouse Events
-  slide.addEventListener("mousedown", touchStart(index));
-  slide.addEventListener("mouseup", touchEnd);
-  slide.addEventListener("mouseleave", touchEnd);
-  slide.addEventListener("mousemove", touchMove);
-});
+//   // Mouse Events
+//   slide.addEventListener("mousedown", touchStart(index));
+//   slide.addEventListener("mouseup", touchEnd);
+//   slide.addEventListener("mouseleave", touchEnd);
+//   slide.addEventListener("mousemove", touchMove);
+// });
 
-window.oncontextmenu = function (event) {
-  event.preventDefault();
-  event.stopPropagation();
-  return false;
-};
+// window.oncontextmenu = function (event) {
+//   event.preventDefault();
+//   event.stopPropagation();
+//   return false;
+// };
 
-function touchStart(index) {
-  return function (event) {
-    currentIndex = index;
-    startPos = getPositionX(event);
-    console.log(startPos);
-    isDragging = true;
+// function touchStart(index) {
+//   return function (event) {
+//     currentIndex = index;
+//     startPos = getPositionX(event);
+//     console.log(startPos);
+//     isDragging = true;
 
-    animationID = requestAnimationFrame(animation);
-  };
-}
+//     animationID = requestAnimationFrame(animation);
+//   };
+// }
 
-function touchEnd() {
-  isDragging = false;
-  cancelAnimationFrame(animationID);
+// function touchEnd() {
+//   isDragging = false;
+//   cancelAnimationFrame(animationID);
 
-  const movedBy = currentTranslate - prevTranslate;
+//   const movedBy = currentTranslate - prevTranslate;
 
-  if (movedBy < -100 && currentIndex < mobileSlides.length - 1) {
-    currentIndex += 1;
-  }
+//   if (movedBy < -100 && currentIndex < mobileSlides.length - 1) {
+//     currentIndex += 1;
+//   }
 
-  if (movedBy > 100 && currentIndex > 0) {
-    currentIndex -= 1;
-  }
+//   if (movedBy > 100 && currentIndex > 0) {
+//     currentIndex -= 1;
+//   }
 
-  setPositionByIndex();
-}
+//   setPositionByIndex();
+// }
 
-function touchMove(event) {
-  if (isDragging) {
-    const currentPosition = getPositionX(event);
-    currentTranslate = prevTranslate + currentPosition - startPos;
-  }
-}
+// function touchMove(event) {
+//   if (isDragging) {
+//     const currentPosition = getPositionX(event);
+//     currentTranslate = prevTranslate + currentPosition - startPos;
+//   }
+// }
 
-function getPositionX(event) {
-  return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
-}
+// function getPositionX(event) {
+//   return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
+// }
 
-function animation() {
-  setSliderPosition();
-  if (isDragging) requestAnimationFrame(animation);
-}
+// function animation() {
+//   setSliderPosition();
+//   if (isDragging) requestAnimationFrame(animation);
+// }
 
-function setSliderPosition() {
-  slider.style.transform = `translateX(${currentTranslate}px)`;
-}
+// function setSliderPosition() {
+//   slider.style.transform = `translateX(${currentTranslate}px)`;
+// }
 
-function setPositionByIndex() {
-  currentTranslate = currentIndex * -window.innerWidth;
-  prevTranslate = currentTranslate;
-  setSliderPosition();
-}
+// function setPositionByIndex() {
+//   currentTranslate = currentIndex * -window.innerWidth;
+//   prevTranslate = currentTranslate;
+//   setSliderPosition();
+// }
