@@ -59,6 +59,10 @@
   color: #fff;
 }
 
+.is-hidden {
+  display: none;
+}
+
 /* Padding */
 .py-1 {
   padding: 1rem 0;
