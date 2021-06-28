@@ -1,38 +1,36 @@
 html, body {
-    height: 100%;
-    width: 100%;
     border-left: 0px;
+    height: 100%;
     margin: 0;
+    width: 100%;
 }
 
 .container{
+    align-items: center;
+    background-color: white;
+    border-bottom: solid rgb(244, 243, 243) 40px;
+    display: flex;
     height: 100%;
     width: 100%;
-    background-color: white;
-    border-bottom: solid rgb(243, 243, 243) 40px;
-    display: flex;
-    align-items: center;
 }
 
 .content {
-    height: 80%;
-    width: 80%;
-    margin: 10%;
     background-color: white;
+    height: 80%;
+    margin: 10%;
+    width: 80%;
 }
 
-.floating_button{
-    text-align: center;        
-    width: 100px;
-    height: 100px;
-    float: left;
-    border: 1px solid black;  
-    display: flex;    
-    align-items: center;
-}
-
-#footer {
+#download_button {
+    bottom: 40px;
     position:fixed;
     right: 40px;
-    bottom: 40px;
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+
