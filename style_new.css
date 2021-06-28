@@ -1,12 +1,15 @@
 html, body {
     height: 100%;
     width: 100%;
+    border-left: 0px;
+    margin: 0;
 }
 
 .container{
     height: 100%;
     width: 100%;
     background-color: white;
+    border-bottom: solid rgb(243, 243, 243) 40px;
 }
 
 
