@@ -10,15 +10,25 @@ html, body {
     width: 100%;
     background-color: white;
     border-bottom: solid rgb(243, 243, 243) 40px;
+    display: flex;
+    align-items: center;
 }
 
+.content {
+    height: 80%;
+    width: 80%;
+    margin: 10%;
+    background-color: white;
+}
 
 .floating_button{
     text-align: center;        
-    width: 70px;
-    height: 7z0px;
+    width: 100px;
+    height: 100px;
     float: left;
-    border: 1px solid black;      
+    border: 1px solid black;  
+    display: flex;    
+    align-items: center;
 }
 
 #footer {
