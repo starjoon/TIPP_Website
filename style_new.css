@@ -1,12 +1,25 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+
+.floating_button{
+    text-align: center;        
+    width: 70px;
+    height: 7z0px;
+    float: left;
+    border: 1px solid black;      
+}
+
 #footer {
     position:fixed;
     right: 40px;
     bottom: 40px;
-}
-.floating_button{
-    text-align: center;        
-    width: 70px;
-    height: 70px;
-    float: left;
-    border: 1px solid black;      
 }
