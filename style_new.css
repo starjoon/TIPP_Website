@@ -1,0 +1,36 @@
+html, body {
+    border-left: 0px;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+.container{
+    align-items: center;
+    background-color: white;
+    border-bottom: solid rgb(244, 243, 243) 40px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    background-color: white;
+    height: 80%;
+    margin: 10%;
+    width: 80%;
+}
+
+#download_button {
+    bottom: 40px;
+    position:fixed;
+    right: 40px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+
